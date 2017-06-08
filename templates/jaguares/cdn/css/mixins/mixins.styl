@@ -1,0 +1,48 @@
+my-colors = 'aluminium' #8B8B8B,
+            'crete' #494200,
+            'black' black,
+            'gorse' #ffe600,
+            'nero' #171717,
+            'orange_red' #e10000,
+            'white' #ffffff
+
+for pair in my-colors
+  .{pair[0]}
+    background-color pair[1]
+  .l-{pair[0]}
+  	color pair[1]
+  .h-{pair[0]}
+    &:hover
+      color pair[1] !important
+      text-decoration none
+  .f-{pair[0]}
+    &:focus
+      color pair[1]
+      text-decoration none
+transform(angulo)
+  -ms-transform rotate(angulo)
+  -webkit-transform rotate(angulo)
+  transform rotate(angulo)
+.bold
+  font-weight bold
+.pointer
+  cursor pointer
+
+.textura_gorse
+  background url(cdn/images/bg_yellow_full.jpg) repeat
+  #sidebar
+    *
+      color #171717
+      list-style none
+.textura_gray
+  background url(cdn/images/bg_gray_full.jpg) repeat
+  #sidebar
+    *
+      color #171717
+      list-style none
+.textura_black
+  background url(cdn/images/bg_black_full.jpg) repeat
+  #sidebar
+    *
+      color whitesmoke
+      list-style none

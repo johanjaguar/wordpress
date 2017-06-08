@@ -1,0 +1,47 @@
+// MIXINS
+vendor(prop, args)
+  -webkit-{prop} args
+  -moz-{prop} args
+  -o-{prop} args
+  {prop} args
+
+my-colors = 'black' #000000,
+            'athensgrey' #e6e6e6,
+            'light_gray' #d2d2d2,
+            'moon_yellow' #ffc000,
+            'nero' #282828,
+            'white' #ffffff,
+            'whitesmoke' #e9eeee
+
+for pair in my-colors
+  .{pair[0]}
+    background-color pair[1]
+  .l-{pair[0]}
+  	color pair[1]
+  .h-{pair[0]}
+    &:hover
+      color pair[1] !important
+      text-decoration none
+  .f-{pair[0]}
+    &:focus
+      color pair[1]
+      text-decoration none
+
+transform(angulo)
+  -ms-transform rotate(angulo)
+  -webkit-transform rotate(angulo)
+  transform rotate(angulo)
+.bold
+  font-weight bold
+.pointer
+  cursor pointer
+
+.textura_gorse
+  background url(cdn/images/bg_yellow_full.jpg) repeat
+
+rotacion()
+  opacity 1
+  vendor('transform', arguments)
+  z-index 1000
+.centrado
+  text-align center
